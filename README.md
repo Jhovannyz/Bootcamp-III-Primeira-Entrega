@@ -33,11 +33,15 @@ sdd-task-analyzer/
 
 ## Como Executar
 
-1. Instalar as dependências:
+1. **Instalar as dependências:**
+   ```bash
    pip install -r requirements.txt
+   ```
 
-2. Executar o Test Harness (Pytest):
-   pytest -v
+2. **Executar o Test Harness (Pytest):**
+   ```bash
+   py -m pytest -v
+   ```
 
 ---
 
