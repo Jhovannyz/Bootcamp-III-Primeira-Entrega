@@ -1,6 +1,19 @@
-# SDD TaskAnalyzer
+<h1 align="center">SDD TaskAnalyzer</h1>
 
 Módulo avançado de métricas e produtividade desenvolvido com **Spec-Driven Development (SDD)**, governança de IA e Test Harness automatizado para a disciplina de **Bootcamp III (UniCEUB)**.
+
+---
+
+## Sobre o Projeto
+
+O **TaskAnalyzer** é um motor determinístico em Python desenvolvido para analisar coleções de tarefas operacionais, calcular tempos médios de conclusão, computar taxas de atraso e segmentar indicadores por prioridade (`baixa`, `media`, `alta`).
+
+Sua arquitetura segue o paradigma **Spec-Driven Development (SDD)**, utilizando o contrato executável em `specs/task_analyzer_spec.md` e as regras em `CONTEXT_RULES.md`[cite: 23].
+
+>  **Contrato Principal:** `TaskAnalyzer.analyze(tasks: list[dict]) -> dict`  
+> - **Filtro Estrito:** Processa apenas tarefas concluídas (`status == "concluida"`).
+> - **Resiliência:** Retorna `0.0` em coleções sem conclusões (evita divisão por zero).
+> - **Validação:** Lança `InvalidTaskDataError` caso `data_conclusao < data_criacao`.
 
 ---
 
@@ -42,16 +55,6 @@ sdd-task-analyzer/
    ```bash
    py -m pytest -v
    ```
-
----
-
-## Contrato de Interface (Resumo)
-
-- **Método Principal:** TaskAnalyzer.analyze(tasks: list[dict]) -> dict
-- **Regras de Negócio:**
-  - Métricas calculadas apenas para tarefas com status == "concluida".
-  - Retorna 0.0 para médias/taxas se não houver tarefas concluídas (previne divisão por zero).
-  - Lança a exceção InvalidTaskDataError caso data_conclusao < data_criacao.
 
 ---
 
