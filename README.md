@@ -4,7 +4,7 @@ Módulo avançado de métricas e produtividade desenvolvido com **Spec-Driven De
 
 ---
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - **Python 3.11+**
 - **Pytest** (Test Harness)
@@ -14,6 +14,7 @@ Módulo avançado de métricas e produtividade desenvolvido com **Spec-Driven De
 
 ## Estrutura do Repositório
 
+```text
 sdd-task-analyzer/
 ├── README.md                  # Documentação do projeto
 ├── CONTEXT_RULES.md           # Regras de governança para a IA
@@ -26,6 +27,7 @@ sdd-task-analyzer/
 └── src/
     ├── __init__.py
     └── task_analyzer.py       # Código-fonte principal
+```
 
 ---
 
