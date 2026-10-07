@@ -8,9 +8,9 @@ Módulo avançado de métricas e produtividade desenvolvido com **Spec-Driven De
 
 O **TaskAnalyzer** é um motor determinístico em Python desenvolvido para analisar coleções de tarefas operacionais, calcular tempos médios de conclusão, computar taxas de atraso e segmentar indicadores por prioridade (`baixa`, `media`, `alta`).
 
-Sua arquitetura segue o paradigma **Spec-Driven Development (SDD)**, utilizando o contrato executável em `specs/task_analyzer_spec.md` e as regras em `CONTEXT_RULES.md`[cite: 23].
+Sua arquitetura segue o paradigma **Spec-Driven Development (SDD)**, utilizando o contrato executável em `specs/task_analyzer_spec.md` e as regras em `CONTEXT_RULES.md`.
 
->  **Contrato Principal:** `TaskAnalyzer.analyze(tasks: list[dict]) -> dict`  
+>  **Método Principal:** `TaskAnalyzer.analyze(tasks: list[dict]) -> dict`  
 > - **Filtro Estrito:** Processa apenas tarefas concluídas (`status == "concluida"`).
 > - **Resiliência:** Retorna `0.0` em coleções sem conclusões (evita divisão por zero).
 > - **Validação:** Lança `InvalidTaskDataError` caso `data_conclusao < data_criacao`.
